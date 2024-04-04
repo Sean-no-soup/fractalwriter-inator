@@ -54,9 +54,9 @@ for row in range(0, maskRows**userNum):         #vertical position
 
             #find position on mask
             #ex: 3x3 mask, 3 iterations, 27x27 total. pos(0-26) -> maskpos (0-2)
-            #layer 2:27x27  mask^layer = 27        maskpos= (pos/(maskMax**layer))%mask = (pos/9)%3    0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2
-            #layer 1:9x9    mask^layer = 9         maskpos= (pos/(maskMax**layer))%mask = (pos/3)%3    0 0 0 1 1 1 2 2 2 0 0 0 1 1 1 2 2 2 0 0 0 1 1 1 2 2 2
-            #layer 0:3x3    mask^layer = 3         maskpos= (pos/(maskMax**layer))%mask = (pos/1)%3    0 1 2 0 1 2 0 1 2 0 1 2 0 1 2 0 1 2 0 1 2 0 1 2 0 1 2
+            #layer 2:27x27  mask**layer = 27        maskpos= (pos/(maskMax**layer))%mask = (pos/9)%3    0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2
+            #layer 1:9x9    mask**layer = 9         maskpos= (pos/(maskMax**layer))%mask = (pos/3)%3    0 0 0 1 1 1 2 2 2 0 0 0 1 1 1 2 2 2 0 0 0 1 1 1 2 2 2
+            #layer 0:3x3    mask**layer = 3         maskpos= (pos/(maskMax**layer))%mask = (pos/1)%3    0 1 2 0 1 2 0 1 2 0 1 2 0 1 2 0 1 2 0 1 2 0 1 2 0 1 2
 
             maskRow = int(  (row/(maskRows**layer))   %   maskRows)
             maskCol = int(  (col/(maskCols**layer))   %   maskCols)
